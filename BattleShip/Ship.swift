@@ -5,7 +5,6 @@
 //  Created by Gabriel Robinson on 2/24/19.
 //  Copyright © 2019 CS4530. All rights reserved.
 //
-
 import Foundation
 
 enum ShipStatus: Int, Codable {
@@ -21,17 +20,17 @@ class Ship: Codable {
     private var hitCount: Int
     var coords = [String: CellStatus]()
     var shipStatus: ShipStatus = .AFLOAT
-    
+
     init(size: Int) {
         self.size = size
         self.hitCount = 0
     }
-    
+
     func add(coord: (Int, Int)) {
         let id: String = tupleToString(tup: coord)
         self.coords[id] = .NOTFIREDAT
     }
-    
+
     func hit(coord: (Int, Int))->(CellStatus, ShipStatus) {
         let id: String = tupleToString(tup: coord)
         var result: CellStatus
@@ -45,15 +44,15 @@ class Ship: Codable {
         } else { result = .MISS}
         return (result, shipStatus)
     }
-    
+
     private func shipSunk(shipID: String)->Bool {
         return hitCount == size
     }
-    
+
     func getSize()->Int {
         return self.size
     }
-    
+
     func getShipsCoordinates()->[String: CellStatus] {
         return coords
     }

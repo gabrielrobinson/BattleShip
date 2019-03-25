@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		568B050B16679D4D351336FA /* GameRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568B0390077727AAB3CBD5F9 /* GameRequests.swift */; };
+		568B08C53E12433C7D1D2F92 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568B0267B58EA7271C62A663 /* NetworkResponse.swift */; };
+		568B0DDD6E6F580D8002C914 /* Constants in Resources */ = {isa = PBXBuildFile; fileRef = 568B0F00AB320F5767E28AF0 /* Constants */; };
+		568B0DE1C7A03F0427ED4F78 /* GameFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568B037F8F8C613237A2496E /* GameFileManager.swift */; };
+		568B0E30E1E087DC29812D0A /* NetworkDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568B096D2A78F4FAADD6E8F5 /* NetworkDelegates.swift */; };
 		BEDF2A12222162AE00F5E3B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2A11222162AE00F5E3B8 /* AppDelegate.swift */; };
 		BEDF2A19222162B300F5E3B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDF2A18222162B300F5E3B8 /* Assets.xcassets */; };
 		BEDF2A27222162B300F5E3B8 /* BattleShipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2A26222162B300F5E3B8 /* BattleShipTests.swift */; };
@@ -43,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		568B0267B58EA7271C62A663 /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		568B037F8F8C613237A2496E /* GameFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFileManager.swift; sourceTree = "<group>"; };
+		568B0390077727AAB3CBD5F9 /* GameRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRequests.swift; sourceTree = "<group>"; };
+		568B096D2A78F4FAADD6E8F5 /* NetworkDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDelegates.swift; sourceTree = "<group>"; };
+		568B0F00AB320F5767E28AF0 /* Constants */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Constants; sourceTree = "<group>"; };
 		BEDF2A0E222162AE00F5E3B8 /* BattleShip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleShip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDF2A11222162AE00F5E3B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDF2A18222162B300F5E3B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +102,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		568B0F1179C29E2A63F33FB6 /* BattleShipNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				568B037F8F8C613237A2496E /* GameFileManager.swift */,
+				568B0390077727AAB3CBD5F9 /* GameRequests.swift */,
+				568B096D2A78F4FAADD6E8F5 /* NetworkDelegates.swift */,
+				568B0267B58EA7271C62A663 /* NetworkResponse.swift */,
+			);
+			path = BattleShipNetwork;
+			sourceTree = "<group>";
+		};
 		BEDF2A05222162AE00F5E3B8 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +151,8 @@
 				BEDF2A11222162AE00F5E3B8 /* AppDelegate.swift */,
 				BEDF2A18222162B300F5E3B8 /* Assets.xcassets */,
 				BEDF2A1D222162B300F5E3B8 /* Info.plist */,
+				568B0F00AB320F5767E28AF0 /* Constants */,
+				568B0F1179C29E2A63F33FB6 /* BattleShipNetwork */,
 			);
 			path = BattleShip;
 			sourceTree = "<group>";
@@ -258,6 +281,7 @@
 			files = (
 				BEDF2A19222162B300F5E3B8 /* Assets.xcassets in Resources */,
 				BEDF2A5B22235FBF00F5E3B8 /* Default-568h@2x.png in Resources */,
+				568B0DDD6E6F580D8002C914 /* Constants in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +318,10 @@
 				BEDF2A7522255BB200F5E3B8 /* SwitchPlayersViewController.swift in Sources */,
 				BEDF2A632223B80500F5E3B8 /* GridCell.swift in Sources */,
 				BEDF2A73222549AC00F5E3B8 /* GridView.swift in Sources */,
+				568B0DE1C7A03F0427ED4F78 /* GameFileManager.swift in Sources */,
+				568B050B16679D4D351336FA /* GameRequests.swift in Sources */,
+				568B0E30E1E087DC29812D0A /* NetworkDelegates.swift in Sources */,
+				568B08C53E12433C7D1D2F92 /* NetworkResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

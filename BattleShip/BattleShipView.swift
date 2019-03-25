@@ -5,45 +5,44 @@
 //  Created by Gabriel Robinson on 2/25/19.
 //  Copyright © 2019 CS4530. All rights reserved.
 //
-
 import UIKit
 
 class BattleShipView: UIView {
     var currentPlayerGrid: [[GridCell]]
     var currentPlayerGridView: GridView
-    
+
     var opponentPlayerGrid: [[GridCell]]
     var opponentPlayerGridView: GridView
-    
+
     let hitsLabel = UILabel()
     let missesLabel = UILabel()
     let remainingLabel = UILabel()
     let winningPlayerLabel = UILabel()
 
     var winningPlayersName: String?
-    
+
     init(frame: CGRect, currentPlayerGrid: [[GridCell]], opponentPlayerGrid: [[GridCell]], shipCoordsCP: [String: Int], creator: BattleShipViewController, stats: (Int, Int, Int)) {
         self.opponentPlayerGrid = opponentPlayerGrid
         self.opponentPlayerGridView = GridView(frame: CGRect.zero, grid: opponentPlayerGrid, creator: creator)
-        
+
         self.currentPlayerGrid = currentPlayerGrid
         self.currentPlayerGridView = GridView(frame: CGRect.zero, grid: currentPlayerGrid, shipCoordinatesCP: shipCoordsCP)
-        
+
         hitsLabel.textColor = .white
         hitsLabel.text = "Hits: \(stats.0)"
         hitsLabel.textAlignment = .center
-        
+
         missesLabel.textColor = .white
         missesLabel.text = "Misses: \(stats.1)"
         missesLabel.textAlignment = .center
-        
+
         remainingLabel.textColor = .white
         remainingLabel.text = "Remaining:  \(stats.2)"
         remainingLabel.textAlignment = .center
-        
+
         super.init(frame: frame)
     }
-    
+
     override func draw(_ rect: CGRect) {
         if let winningPlayersName = winningPlayersName {
             winningPlayerLabel.textColor = .white
@@ -58,11 +57,11 @@ class BattleShipView: UIView {
         addSubview(winningPlayerLabel)
         super.draw(rect)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func layoutSubviews() {
         if(bounds.height > bounds.width) {
             self.opponentPlayerGridView.frame = CGRect(x: frame.width / 4, y: 2 * navigationBarHeight! + 10.0, width: frame.width / 2, height: frame.width / 2)
@@ -81,9 +80,9 @@ class BattleShipView: UIView {
             self.winningPlayerLabel.frame = CGRect(x: currentPlayerGridView.frame.maxX + 10, y: remainingLabel.frame.maxY + 5, width: frame.height / 2, height: 20)
         }
     }
-    
+
     func setWinningPlayers(name: String) {
         self.winningPlayersName = name
     }
-    
+
 }

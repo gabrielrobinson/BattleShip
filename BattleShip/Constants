@@ -1,0 +1,14 @@
+//
+//  Constants.swift
+//  BattleShip
+//
+//  Created by Gabriel Robinson on 3/24/19.
+//  Copyright © 2019 CS4530. All rights reserved.
+//
+import Foundation
+
+
+class Constants {
+    static var NewGameFile = "new_games"
+    static var GameDetailsFile = "game_details"
+}
